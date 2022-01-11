@@ -128,17 +128,19 @@ while True:
 
     while eti_nome == None:
 
-        eti_nome = input("\nDigite o NOME da etiqueta: ")
+        while True:
+            eti_nome = input("\nDigite o NOME da etiqueta: ")
 
-        if len(df_etiqueta.loc[df_etiqueta['ETI_NOME'] == eti_nome].values) > 0:
-            print("Etiqueta Encontrada - OK!")
-            break
+            if len(df_etiqueta.loc[df_etiqueta['ETI_NOME'] == eti_nome].values) > 0:
+                print("Etiqueta Encontrada - OK!")
+                break
 
-        else:
-            print('\nERRO - Etiqueta NÃO encontrada!')
-            print('- VEFIQUE SE O NOME DIGITADO CORRESPONDE AO DO SISTEMA (RESPEITE ESPAÇOS E ACENTOS)')
-            print('- VERIFIQUE SE O CAMPO LIN_CODIGO E LIN_NOME DO ARQUIVO MDB ESTÃO TROCADOS')
-
+            else:
+                os.system('cls')
+                print('\nERRO - Etiqueta NÃO encontrada!')
+                print('- VEFIQUE SE O NOME DIGITADO CORRESPONDE AO DO SISTEMA (RESPEITE ESPAÇOS, ACENTOS E CAPSLOCK)')
+                print('- VERIFIQUE SE O CAMPO LIN_CODIGO E LIN_NOME DO ARQUIVO MDB ESTÃO TROCADOS')
+    
     #LEITURA DE PARAMETROS DA ETI
     eti_cod      = df_etiqueta.loc[df_etiqueta['ETI_NOME'] == eti_nome]['ETI_CODIGO'].values[0]
     eti_altura   = df_etiqueta.loc[df_etiqueta['ETI_NOME'] == eti_nome]['ETI_ALTURA'].values[0]
