@@ -19,6 +19,8 @@ Fiz um vídeo curto explicando como fazer a instalação do programa. Basicament
 ## Como usar?
 Fiz um pequeno vídeo explicando como utilizar:
 
+<img src= "https://user-images.githubusercontent.com/77119687/155896912-b53706a2-a395-481a-9b45-30e45fa92a27.png" width= "320" height= "280"/>
+
 [Tutorial ETIvisualizer](https://youtu.be/CEe0qKWeOPg)
 
 ## Como funciona?
